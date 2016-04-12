@@ -5,22 +5,24 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/null" fx:controller="Core.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Core.Controller">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open file" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" onAction="#openSetUp" text="SetUp" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
@@ -34,12 +36,22 @@
    <bottom>
       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
-            <Label text="Label" />
-          <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" />
+          <Button mnemonicParsing="false" text="Start" />
+            <Button mnemonicParsing="false" text="Step" />
+            <Button mnemonicParsing="false" text="Reset" />
         </items>
       </ToolBar>
    </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="86.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField alignment="CENTER" prefHeight="60.0" prefWidth="615.0">
+               <font>
+                  <Font name="Roboto Regular" size="30.0" />
+               </font>
+            </TextField>
+            <Label text="State" />
+         </children>
+      </VBox>
+   </center>
 </BorderPane>

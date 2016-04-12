@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="236.0" prefWidth="344.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Core.SetUpController">
+   <children>
+      <Label layoutX="48.0" layoutY="47.0" text="Estado Inicial:" />
+      <Label layoutX="48.0" layoutY="85.0" text="Simbolo Blanco:" />
+      <Label layoutX="20.0" layoutY="133.0" text="Estado(s) de Aceptación" />
+      <TextField layoutX="154.0" layoutY="43.0" />
+      <TextField layoutX="154.0" layoutY="81.0" />
+      <TextField layoutX="154.0" layoutY="129.0" />
+      <Button layoutX="184.0" layoutY="189.0" mnemonicParsing="false" onAction="#close" text="Set Up" />
+   </children>
+</AnchorPane>
