@@ -60,8 +60,10 @@ public class TuringMachine {
         while (finish == false) {
             if (move > tape.size()-1)
                 tape.addLast(blank);
-            if (move < 0)
+            if (move < 0){
                 tape.addFirst(blank);
+                move = 0;
+            }
             char currentInput = tape.get(move);
             int result = searchPosition(currentState,currentInput);
             if (result < 0 && currentState == finalStat)
