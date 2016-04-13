@@ -2,6 +2,7 @@ package Core;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -16,6 +17,10 @@ public class SetUpController implements Initializable {
     private String inicial;
     private String espacio;
     private String aceptacion;
+    private TuringMachine turingMachine;
+
+    @FXML
+    TextField stateField,blackField,acceptationField;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -28,6 +33,12 @@ public class SetUpController implements Initializable {
 
     @FXML
     private void close(){
+        String initialState = stateField.getText();
+        String espacio = blackField.getText();
+        String aceptacion = acceptationField.getText();
+        turingMachine.setInicialState(initialState);
+        turingMachine.setBlankSymbol(espacio);
+        turingMachine.setFinalStates(aceptacion);
         this.stage.close();
     }
 

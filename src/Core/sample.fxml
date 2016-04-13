@@ -36,16 +36,16 @@
    <bottom>
       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
-          <Button mnemonicParsing="false" text="Start" />
-            <Button mnemonicParsing="false" text="Step" />
-            <Button mnemonicParsing="false" text="Reset" />
+          <Button fx:id="StartButton" mnemonicParsing="false" onAction="#start" text="Start" />
+            <Button fx:id="StepButton" mnemonicParsing="false" text="Step" />
+            <Button fx:id="ResetButton" mnemonicParsing="false" text="Reset" />
         </items>
       </ToolBar>
    </bottom>
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="86.0" prefWidth="615.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField alignment="CENTER" prefHeight="60.0" prefWidth="615.0">
+            <TextField fx:id="tape" alignment="CENTER" prefHeight="60.0" prefWidth="615.0">
                <font>
                   <Font name="Roboto Regular" size="30.0" />
                </font>

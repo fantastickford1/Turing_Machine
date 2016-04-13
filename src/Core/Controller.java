@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -18,12 +20,16 @@ public class Controller implements Initializable{
     private int lines;
     private String text[];
     private TuringMachine turingMachine;
+    private String cadenaDeEntrada;
 
-
+    @FXML
+    Button StartButton,StepButton,ResetButton;
+    @FXML
+    TextField tape;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        turingMachine = new TuringMachine();
     }
 
     /**
@@ -101,7 +107,6 @@ public class Controller implements Initializable{
         return count;
     }
 
-
     private void createTransitions(String[] postTransitions){
         String ext = postTransitions[0];
         String[] extS = ext.split(" ");
@@ -123,7 +128,13 @@ public class Controller implements Initializable{
             }
         }
         turingMachine.setTransitions(transitions);
-
     }
 
+    @FXML
+    private void start(){
+        cadenaDeEntrada = tape.getText();
+        turingMachine.setInput(cadenaDeEntrada);
+        String here = turingMachine.startingTuringMachine();
+        tape.setText(here);
+    }
 }

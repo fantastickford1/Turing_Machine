@@ -10,9 +10,9 @@
       <Label layoutX="48.0" layoutY="47.0" text="Estado Inicial:" />
       <Label layoutX="48.0" layoutY="85.0" text="Simbolo Blanco:" />
       <Label layoutX="20.0" layoutY="133.0" text="Estado(s) de Aceptación" />
-      <TextField layoutX="154.0" layoutY="43.0" />
-      <TextField layoutX="154.0" layoutY="81.0" />
-      <TextField layoutX="154.0" layoutY="129.0" />
+      <TextField fx:id="stateField" layoutX="154.0" layoutY="43.0" />
+      <TextField fx:id="blackField" layoutX="154.0" layoutY="81.0" />
+      <TextField fx:id="acceptationField" layoutX="154.0" layoutY="129.0" />
       <Button layoutX="184.0" layoutY="189.0" mnemonicParsing="false" onAction="#close" text="Set Up" />
    </children>
 </AnchorPane>
